@@ -1,0 +1,129 @@
+﻿<%@ Master Language="C#" MasterPageFile="~/MasterPage.master" AutoEventWireup="true" CodeFile="MasterPage2.master.cs" Inherits="MasterPage2" %>
+
+<asp:Content ID="Content1" ContentPlaceHolderID="head" runat="Server">
+    <link href="Style.css" rel="stylesheet" type="text/css" />
+     <style type="text/css">
+        
+               
+
+        
+        
+        .auto-style1 {
+            width: auto;
+        }
+
+        .auto-style2 {
+            width: 423px;
+        }
+
+
+    </style>
+
+</asp:Content>
+<asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="Server">
+
+    <div style="text-align: center;">
+
+        <table style="width: 1000px; margin-left: auto; margin-right: auto;">
+            <tr>
+
+
+                <%--<div class="menu_left">--%>
+                <%--Left_content.......................................................--%>
+
+
+
+                <td style="vertical-align:top;">
+                    <div class="left_content">
+                      
+                        
+                          <div class="title_box">Categories</div>
+
+
+                        <asp:Literal ID="Menu_Lit" runat="server"></asp:Literal>
+
+
+
+
+                        <div class="title_box">Special Products</div>
+                        <div class="border_box">
+                            <div class="product_title"><a href="details.html">new Product</a></div>
+                            <div class="product_img"><a href="details.html">
+                                <img src="images/laptop.png" alt=""  style="vertical-align:central;" /></a></div>
+                            <div class="prod_price"><span class="reduce">- -</span> <span class="price">- -</span></div>
+                        </div>
+
+
+
+                        <div class="title_box">Newsletter</div>
+                        <div class="border_box">
+                            <input type="text" name="newsletter" class="newsletter_input" value="your email" />
+                            <a href="http://www.Google.com" class="join">join</a>
+                        </div>
+                        <div class="banner_adds"><a href="http://www.Google.com">
+                            <img src="images/bann2.jpg" alt=""  /></a> </div>
+                    </div>
+
+                </td>
+
+                <td style="vertical-align:top;" colspan="2">
+
+                    <div>
+                        <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                        </asp:ContentPlaceHolder>
+                    </div>
+                </td>
+
+
+                <td style="vertical-align:top;">
+                    <%--..................... right master ......................--%>
+
+                    <%-- <div class="master_right" >--%>
+                    <div class="right_content">
+                        <div class="shopping_cart">
+                            <div class="cart_title">Shopping cart</div>
+                            <div class="cart_details">
+                                0 items
+                                <br />
+                                <span class="border_cart"></span>Total: <span class="price">00.00 L.E</span>
+                            </div>
+                            <div class="cart_icon"><a href="http://www.Google.com">
+                                <img src="images/shoppingcart.png" alt="" width="48" height="48"  /></a></div>
+                        </div>
+                        <div class="title_box">What’s new</div>
+                        <div class="border_box">
+                            <div class="product_title"><a href="details.html">Product</a></div>
+                            <div class="product_img"><a href="details.html">
+                                <img src="images/p2.gif" alt=""  /></a></div>
+                            <div class="prod_price"><span class="reduce">-_-</span> <span class="price">- -</span></div>
+                        </div>
+
+                        <div class="title_box">Manufacturers</div>
+                        <ul class="left_menu">
+                            <li class="odd"><a href="http://www.Google.com">Sony</a></li>
+                            <li class="even"><a href="http://www.Google.com">Samsung</a></li>
+                            <li class="odd"><a href="http://www.Google.com">Daewoo</a></li>
+                            <li class="even"><a href="http://www.Google.com">LG</a></li>
+                            <li class="odd"><a href="http://www.Google.com">Fujitsu Siemens</a></li>
+                            <li class="even"><a href="http://www.Google.com">Motorola</a></li>
+                            <li class="odd"><a href="http://www.Google.com">Phillips</a></li>
+                            <li class="even"><a href="http://www.Google.com">Beko</a></li>
+                        </ul>
+                        <div class="banner_adds" style="text-align: center"><a href="http://www.Google.com">
+                            <img src="images/bann1.jpg" alt=""  /></a> </div>
+                    </div>
+
+
+                </td>
+
+            </tr>
+        </table>
+
+    </div>
+
+
+
+
+
+</asp:Content>
+

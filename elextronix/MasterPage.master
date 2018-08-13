@@ -1,0 +1,238 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="MasterPage.master.cs" Inherits="MasterPage" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+
+
+<head runat="server">
+    <title></title>
+
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+
+    <link href="Style.css" rel="stylesheet" type="text/css" />
+
+</head>
+
+
+
+
+<body>
+    <form id="form1" runat="server">
+
+        
+
+
+        <div class="main_container">
+        
+            <div class="top_bar_multiview">
+        <div class="top_multiview">
+            
+            <asp:MultiView ID="MultiView1" runat="server">
+               <asp:View ID="ViewUser" runat="server">
+                   
+                   <table>
+                       <tr><td>
+          <strong>     <div class="contact_login">  Welcome: <asp:Label ID="Name_for_user" runat="server" ></asp:Label></div></strong>
+                           </td>
+                           <td style="width:350px;"></td>
+          <td>    <div >      <asp:LinkButton ID="Signout_linkbutton" runat="server" OnClick="LinkButton1_Click" cssclass="contact_login">Sign out</asp:LinkButton></div></td>
+                       </tr></table>
+                </asp:View>
+
+                <asp:View ID="ViewUnknow" runat="server"> 
+                    <asp:HyperLink ID="HyperLink1" runat="server" NavigateUrl="Login.aspx" cssclass="contact_login">Login</asp:HyperLink>
+                </asp:View>
+            </asp:MultiView>
+            </div>
+            </div>
+        
+            
+            
+            
+            
+            
+            
+            
+            
+            
+             <%--   <div class="top_bar">
+                <div class="top_search">
+
+                    <table class="Center">
+
+                        <tr>
+                            <td>
+                                <div>
+                                    <h4>Advanced Search </h4>
+                                </div>
+                            </td>
+
+                            <td>
+                                <div>
+                                    <asp:TextBox ID="SearchTB" runat="server"></asp:TextBox>
+                                </div>
+                            </td>
+
+                            <td>
+                                <div>
+                                    <img src="Images/search.gif" />
+                                </div>
+                            </td>
+
+
+                        </tr>
+
+                    </table>
+
+
+                </div>
+            </div>--%>
+        </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        <div id="header">
+            <div class="logo">
+              <img src="Images/logoooooo.png" />
+            </div>
+            <div class="oferte_content">
+
+
+                <div class="top_divider">
+                    <img src="images/header_divider.png" />
+                </div>
+                <div class="oferta">
+                    <table class="Center">
+                        <tr>
+                            <td>
+                                <div class="oferta_content">
+                                    <img src="images/laptop.png" class="oferta_img" />
+                                </div>
+                            </td>
+                            <td>
+                                <div class="oferta_details">
+                                    <div class="oferta_title">Samsung GX 2004 LM</div>
+                                    <div class="oferta_text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco </div>
+
+
+                                    <a href="details.html" class="details">details</a>
+
+                                </div>
+
+
+                            </td>
+
+
+                        </tr>
+
+                    </table>
+
+
+                    <div class="oferta_pagination"><span class="current">1</span> <a href="#">2</a> <a href="#">3</a> <a href="#">4</a> <a href="#">5</a> </div>
+                </div>
+
+            </div>
+
+            <%--   <div class="top_divider"><img src="images/header_divider.png" alt="" width="1" height="164" /></div>--%>
+        </div>
+
+        <!-- end of oferte_content-->
+
+        <div class="main_content">
+            <div class="menu_tab">
+
+
+                <div class="left_menu_corner"></div>
+                <ul class="menu">
+                    <li><a href="Default.aspx" class="nav1">Home</a></li>
+                    <li class="divider"></li>
+                    <li><a href="Products.aspx" class="nav2">Products</a></li>
+                    <li class="divider"></li>
+                   <%-- <li><a href="http://www.Google.com" class="nav3">Specials</a></li>--%>
+                    <li class="divider"></li>
+                    <li><a href="My_account.aspx" class="nav4">My account</a></li>
+                    <li class="divider"></li>
+                    <li><a href="Sign_Up.aspx" class="nav4">Sign Up</a></li>
+                    <li class="divider"></li>
+                    <li><a href="MY_Cart.aspx" class="nav5">MY Cart</a></li>
+                    <li class="divider"></li>
+                    <li><a href="Contact.aspx" class="nav6">Contact Us</a></li>
+                    <li class="divider"></li>
+                    <li class="currencies">Currencies
+          <select>
+              <option>US Dollar</option>
+              <option>Euro</option>
+              <option>L.E </option>
+          </select>
+                    </li>
+                </ul>
+                <%--  --%>
+            </div>
+
+        </div>
+
+
+        <!-- end of menu tab -->
+
+        <div class="crumb_navigation">Navigation: <span class="current">Home</span> </div>
+
+
+
+
+
+
+
+
+
+
+        <div>
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+            </asp:ContentPlaceHolder>
+        </div>
+
+
+        <div class="footer">
+            <div class="left_footer">
+                <img src="images/footer_logo.png" alt="" width="170" height="49" />
+            </div>
+            <div class="center_footer">
+                electronix . All Rights Reserved 2008<br />
+                <img src="images/csscreme.jpg" alt="" border="0" /><br />
+                <img src="images/payment.gif" alt="" />
+            </div>
+            <div class="right_footer"><a href="Home.aspx">home</a> <a href="http://www.Google.com">about</a> <a href="http://www.Google.com">sitemap</a> <a href="http://www.Google.com">rss</a> <a href="Contact us.aspx">contact us</a> </div>
+
+            <div style="text-align: right">This website belongs to Itc Academy </div>
+        </div>
+
+
+
+
+
+    </form>
+</body>
+
+
+
+
+
+
+
+
+
+
+</html>
